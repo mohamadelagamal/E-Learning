@@ -50,6 +50,19 @@ dependencies {
 
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
 
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
+    implementation 'androidx.annotation:annotation:1.4.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    // Retrofit with Moshi Converter
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.7'
+
     def lifecycle_version = "2.5.0-alpha05"
 
     // ViewModel
