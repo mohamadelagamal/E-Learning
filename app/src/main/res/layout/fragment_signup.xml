@@ -53,13 +53,13 @@
                 android:background="@drawable/rounded_text_input"
                 android:elevation="12dp"
                 android:hint="@string/name_example_com"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:paddingHorizontal="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/firstname" />
 
-            <com.google.android.material.textfield.TextInputEditText
+            <LinearLayout
                 android:id="@+id/user_phone"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
@@ -67,12 +67,28 @@
                 android:layout_marginTop="18dp"
                 android:background="@drawable/rounded_text_input"
                 android:elevation="12dp"
-                android:hint="@string/_123_456_7890"
                 android:inputType="text"
                 android:paddingHorizontal="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/user_email" />
+                app:layout_constraintTop_toBottomOf="@id/user_email"
+                android:orientation="horizontal">
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/phoneNumberLib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_text_input"
+                    android:maxLength="10"
+                    android:hint="@string/_123_456_7890"
+                    android:inputType="number"
+                     />
+
+            </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_signup"
@@ -152,18 +168,14 @@
                 app:layout_constraintTop_toBottomOf="@id/btn_facebook">
 
                 <TextView
-                    android:id="@+id/tv_login_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/have_an_account"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tv_login_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:text="@string/log_in"
                     android:clickable="true"
                     android:focusable="true"
                     android:textColor="?attr/colorPrimaryVariant"

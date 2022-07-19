@@ -3,6 +3,7 @@ package com.user.intro.navigation.slider
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
 import android.widget.TextView
 import com.example.e_learning.R
@@ -33,9 +34,9 @@ class SliderActivity : AppCompatActivity() {
         }
         nextPage = findViewById(R.id.nextSlider)
         nextPage.setOnClickListener {
-            val intent = Intent(this,UserMainActivity::class.java)
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-            startActivity(intent)
+                startActivity(Intent(this, UserMainActivity::class.java))
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                finish()
         }
     }
 }
