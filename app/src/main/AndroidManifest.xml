@@ -14,7 +14,7 @@
         android:theme="@style/Theme.ELearning"
         tools:targetApi="31">
         <activity
-            android:name="com.main.login.LoginActivity"
+            android:name="com.main.login.UserMainActivity"
             android:exported="false" />
         <activity
             android:name="com.main.splash.SplashScreen"

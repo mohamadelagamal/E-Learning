@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.e_learning.R
 import com.main.intro.adapter.SliderAdapter
-import com.main.login.LoginActivity
+import com.main.login.UserMainActivity
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
@@ -27,13 +27,13 @@ class SliderActivity : AppCompatActivity() {
         sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION)
         skip= findViewById(R.id.skipSlider)
         skip.setOnClickListener {
-            val intent = Intent (this,LoginActivity::class.java)
+            val intent = Intent (this,UserMainActivity::class.java)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             startActivity(intent)
         }
         nextPage = findViewById(R.id.nextSlider)
         nextPage.setOnClickListener {
-            val intent = Intent(this,LoginActivity::class.java)
+            val intent = Intent(this,UserMainActivity::class.java)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             startActivity(intent)
         }
