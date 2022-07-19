@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">E-Learning</string>
+    <string name="todo">TODO</string>
+    <string name="user_name_or_e_mail">user name or e-mail</string>
+    <string name="password">password</string>
+    <string name="forgot_password">Forget password?</string>
+    <string name="log_in">Log in</string>
+    <string name="or">Or</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="don_t_have_an_account">Don`t Have An Account ?</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">last_name</string>
+    <string name="name_example_com">name@example.com</string>
+    <string name="sign_up">Sign up</string>
+    <string name="_123_456_7890">+20 123 456 7890</string>
+    <string name="have_an_account">Have an account ?</string>
+    <string name="tab_text_1">Login</string>
+    <string name="tab_text_2">Sign Up</string>
+    <string name="e_learning">E Learning</string>
+    <string name="learn_to_grow">learn to grow</string>
+    <string name="skip">Skip</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</string>
+    <string name="choose_the_way_you_want_to_receive_your_confirmation_code">Choose the way you want to receive your confirmation code</string>
+    <string name="your_phone_number">Phone number</string>
+    <string name="your_e_mail">E-mail address</string>
+    <string name="send_code">Send Code</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_0">0</string>
+    <string name="please_enter_the_code_that_we_have_sent_to_your_phone_number">Please Enter The code that we have sent to your phone number</string>
+    <string name="havn_t_received_the_code_yet">Havn\'t received the code yet?</string>
+    <string name="send_it_again">Send it again</string>
+    <string name="confirm">Confirm</string>
+    <string name="confirmation">Confirmation</string>
 </resources>

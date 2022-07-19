@@ -15,7 +15,8 @@
         tools:targetApi="31">
         <activity
             android:name="com.main.login.UserMainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ELearning.NoActionBar" />
         <activity
             android:name="com.main.splash.SplashScreen"
             android:exported="true">
