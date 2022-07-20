@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.main.ui.login.LoginFragment">
+    tools:context="com.main.ui.signup.SignUpFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -78,7 +78,8 @@
                     android:id="@+id/phoneNumberLib"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical" />
+                    android:gravity="center_vertical"
+                    app:ccp_defaultPhoneCode="20" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
