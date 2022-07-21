@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.main.ui.login.LoginFragment">
+    tools:context="com.main.ui.signup.SignUpFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -68,27 +68,78 @@
                 android:background="@drawable/rounded_text_input"
                 android:elevation="12dp"
                 android:inputType="text"
+                android:orientation="horizontal"
                 android:paddingHorizontal="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/user_email"
-                android:orientation="horizontal">
+                app:layout_constraintTop_toBottomOf="@id/user_email">
+
                 <com.hbb20.CountryCodePicker
                     android:id="@+id/phoneNumberLib"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical"/>
+                    android:gravity="center_vertical"
+                    app:ccp_defaultPhoneCode="20" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/rounded_text_input"
-                    android:maxLength="10"
                     android:hint="@string/_123_456_7890"
                     android:inputType="number"
-                     />
+                    android:maxLength="10" />
 
             </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/rounded_text_input"
+                android:elevation="8dp"
+                app:endIconCheckable="true"
+                app:endIconMode="password_toggle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_phone">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/new_password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingHorizontal="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/confirm_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/rounded_text_input"
+                android:elevation="8dp"
+                app:endIconCheckable="true"
+                app:endIconMode="password_toggle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/confirm_password1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/repeat_new_password"
+                    android:maxLines="1"
+                    android:paddingHorizontal="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_signup"
@@ -102,7 +153,7 @@
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="@id/lastname"
                 app:layout_constraintStart_toStartOf="@id/firstname"
-                app:layout_constraintTop_toBottomOf="@id/user_phone" />
+                app:layout_constraintTop_toBottomOf="@id/confirm_password" />
 
             <TextView
                 android:id="@+id/tv_or"
@@ -168,16 +219,20 @@
                 app:layout_constraintTop_toBottomOf="@id/btn_facebook">
 
                 <TextView
+                    android:id="@+id/tv_login_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/have_an_account"
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tv_login_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:clickable="true"
                     android:focusable="true"
+                    android:text="@string/log_in"
                     android:textColor="?attr/colorPrimaryVariant"
                     android:textSize="15sp" />
             </LinearLayout>

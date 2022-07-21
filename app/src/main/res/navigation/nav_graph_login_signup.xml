@@ -9,18 +9,5 @@
         android:id="@+id/LoginSignupPagerFragment"
         android:name="com.main.ui.login_signup_pager.LoginSignupPagerFragment"
         android:label="fragment_login_signup_pager"
-        tools:layout="@layout/fragment_login_signup_pager" >
-        <action
-            android:id="@+id/action_LoginSignupPagerFragment_to_confirmationFragment"
-            app:destination="@id/confirmationFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
-    </fragment>
-    <fragment
-        android:id="@+id/confirmationFragment"
-        android:name="com.main.ui.signup.ConfirmationFragment"
-        android:label="fragment_confirmation"
-        tools:layout="@layout/fragment_confirmation" />
+        tools:layout="@layout/fragment_login_signup_pager" />
 </navigation>
