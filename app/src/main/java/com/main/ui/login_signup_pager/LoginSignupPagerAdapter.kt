@@ -17,14 +17,12 @@ class LoginSignupPagerAdapter(fm: FragmentManager,lifecycle: Lifecycle):Fragment
     val titles = TAB_TITLES
 
     override fun createFragment(position: Int): Fragment {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
         return when (position) {
             0 -> LoginFragment()
             1 -> SignUpFragment()
-            else -> {
-                PlaceholderFragment.newInstance(position + 1)
-            }
+           else->{
+               LoginFragment()
+           }
         }
     }
 

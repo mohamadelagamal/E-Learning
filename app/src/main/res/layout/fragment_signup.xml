@@ -1,242 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.main.ui.signup.SignUpFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView
+    <data>
+        <variable
+            name="vmRegister"
+            type="com.main.ui.signup.SingUpViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context="com.main.ui.login.LoginFragment">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/firstname"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="18dp"
-                android:background="@drawable/rounded_text_input"
-                android:elevation="12dp"
-                android:hint="@string/first_name"
-                android:inputType="text"
-                android:paddingHorizontal="12dp"
-                app:layout_constraintEnd_toStartOf="@id/lastname"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/lastname"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/rounded_text_input"
-                android:elevation="12dp"
-                android:hint="@string/last_name"
-                android:inputType="text"
-                android:paddingHorizontal="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/firstname"
-                app:layout_constraintTop_toTopOf="@id/firstname" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/user_email"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_marginHorizontal="24dp"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/rounded_text_input"
-                android:elevation="12dp"
-                android:hint="@string/name_example_com"
-                android:inputType="textEmailAddress"
-                android:paddingHorizontal="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/firstname" />
-
-            <LinearLayout
-                android:id="@+id/user_phone"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_marginHorizontal="24dp"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/rounded_text_input"
-                android:elevation="12dp"
-                android:inputType="text"
-                android:orientation="horizontal"
-                android:paddingHorizontal="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/user_email">
-
-                <com.hbb20.CountryCodePicker
-                    android:id="@+id/phoneNumberLib"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    app:ccp_defaultPhoneCode="20" />
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/rounded_text_input"
-                    android:hint="@string/_123_456_7890"
-                    android:inputType="number"
-                    android:maxLength="10" />
-
-            </LinearLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/password"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_marginHorizontal="24dp"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/rounded_text_input"
-                android:elevation="8dp"
-                app:endIconCheckable="true"
-                app:endIconMode="password_toggle"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/user_phone">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/new_password"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:paddingHorizontal="12dp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/confirm_password"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_marginHorizontal="24dp"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/rounded_text_input"
-                android:elevation="8dp"
-                app:endIconCheckable="true"
-                app:endIconMode="password_toggle"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/password">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/confirm_password1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/repeat_new_password"
-                    android:maxLines="1"
-                    android:paddingHorizontal="12dp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_signup"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="18dp"
-                android:text="@string/sign_up"
-                android:textAllCaps="false"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:cornerRadius="8dp"
-                app:layout_constraintEnd_toEndOf="@id/lastname"
-                app:layout_constraintStart_toStartOf="@id/firstname"
-                app:layout_constraintTop_toBottomOf="@id/confirm_password" />
-
-            <TextView
-                android:id="@+id/tv_or"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
-                android:text="@string/or"
-                android:textColor="?attr/colorPrimaryVariant"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btn_signup" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/btn_facebook"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="18dp"
-                android:background="@drawable/rounded_text_input"
-                android:cursorVisible="false"
-                android:drawableStart="@drawable/ic_logo_facebook"
-                android:elevation="8dp"
-                android:focusable="false"
-                android:inputType="none"
-                android:paddingHorizontal="12dp"
-                android:selectAllOnFocus="true"
-                android:text="@string/facebook"
-                android:textAlignment="center"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toStartOf="@id/btn_google"
-                app:layout_constraintStart_toStartOf="@id/firstname"
-                app:layout_constraintTop_toBottomOf="@id/tv_or" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/btn_google"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:background="@drawable/rounded_text_input"
-                android:cursorVisible="false"
-                android:drawableStart="@drawable/ic_flat_color_icon_google"
-                android:elevation="8dp"
-                android:focusable="false"
-                android:inputType="none"
-                android:paddingHorizontal="12dp"
-                android:selectAllOnFocus="true"
-                android:text="@string/google"
-                android:textAlignment="center"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@id/lastname"
-                app:layout_constraintStart_toEndOf="@id/btn_facebook"
-                app:layout_constraintTop_toTopOf="@id/btn_facebook" />
-
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="40dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btn_facebook">
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/firstname"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/rounded_text_input"
+                    android:elevation="12dp"
+                    android:text="@={vmRegister.firstName}"
+                    app:error="@{vmRegister.firstError}"
+                    android:hint="@string/first_name"
+                    android:inputType="text"
+                    android:paddingHorizontal="12dp"
+                    app:layout_constraintEnd_toStartOf="@id/lastname"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lastname"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/rounded_text_input"
+                    android:elevation="12dp"
+                    android:text="@={vmRegister.lastName}"
+                    app:error="@{vmRegister.lastNameError}"
+                    android:hint="@string/last_name"
+                    android:inputType="text"
+                    android:paddingHorizontal="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/firstname"
+                    app:layout_constraintTop_toTopOf="@id/firstname" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_email"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/rounded_text_input"
+                    android:elevation="12dp"
+                    android:hint="@string/name_example_com"
+                    android:inputType="textEmailAddress"
+                    android:text="@={vmRegister.email}"
+                    app:error="@{vmRegister.emailError}"
+                    android:paddingHorizontal="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/firstname" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/rounded_text_input"
+                    android:elevation="12dp"
+                    android:hint="@string/password"
+                    android:text="@={vmRegister.password}"
+                    app:error="@{vmRegister.passwordError}"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/user_email" />
+
+                <LinearLayout
+                    android:id="@+id/user_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/rounded_text_input"
+                    android:elevation="12dp"
+                    android:inputType="text"
+                    android:paddingHorizontal="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/password"
+                    android:orientation="horizontal">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/phoneNumberLib"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_text_input"
+                        android:maxLength="10"
+                        android:text="@={vmRegister.phone}"
+                        app:error="@{vmRegister.phoneError}"
+                        android:hint="@string/_123_456_7890"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_signup"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:onClick="@{()->vmRegister.openHome()}"
+                    android:text="@string/sign_up"
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="@id/lastname"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/firstname"
+                    app:layout_constraintTop_toBottomOf="@id/user_phone" />
 
                 <TextView
-                    android:id="@+id/tv_login_1"
+                    android:id="@+id/tv_or"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/have_an_account"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/tv_login_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:text="@string/log_in"
+                    android:layout_marginVertical="20dp"
+                    android:text="@string/or"
                     android:textColor="?attr/colorPrimaryVariant"
-                    android:textSize="15sp" />
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_signup" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/btn_facebook"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/rounded_text_input"
+                    android:cursorVisible="false"
+                    android:drawableStart="@drawable/ic_logo_facebook"
+                    android:elevation="8dp"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:paddingHorizontal="12dp"
+                    android:selectAllOnFocus="true"
+                    android:text="@string/facebook"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/btn_google"
+                    app:layout_constraintStart_toStartOf="@id/firstname"
+                    app:layout_constraintTop_toBottomOf="@id/tv_or" />
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/btn_google"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_text_input"
+                    android:cursorVisible="false"
+                    android:drawableStart="@drawable/ic_flat_color_icon_google"
+                    android:elevation="8dp"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:paddingHorizontal="12dp"
+                    android:selectAllOnFocus="true"
+                    android:text="@string/google"
+                    android:onClick="@{()->vmRegister.signWithGoogle()}"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/lastname"
+                    app:layout_constraintStart_toEndOf="@id/btn_facebook"
+                    app:layout_constraintTop_toTopOf="@id/btn_facebook" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="40dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_facebook">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:textColor="?attr/colorPrimaryVariant"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
