@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">E-Learning</string>
     <string name="todo">TODO</string>
     <string name="user_name_or_e_mail">e-mail</string>
@@ -22,5 +22,17 @@
     <string name="learn_to_grow">learn to grow</string>
     <string name="skip">Skip</string>
     <string name="illegal_arg_message">mohamad</string>
+    <string name="home">Home</string>
+    <string name="welcome_to_e_learning">Welcome to E-Learning</string>
+    <string name="design">Design</string>
+    <string name="hi">Hi</string>
+    <string name="maadi">Maadi,</string>
+    <string name="categories">Categories</string>
+    <string name="popular">Popular</string>
+    <string name="see_all">see all</string>
+    <string name="ux_design">UX Design</string>
+    <string name="by_carla_g">by Carla G.</string>
+    <string name="_30">30$</string>
+    <string name="best_selling">Best selling</string>
 
 </resources>
