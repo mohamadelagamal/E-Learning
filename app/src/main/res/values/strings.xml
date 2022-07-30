@@ -36,5 +36,9 @@
     <string name="best_selling">Best selling</string>
     <string name="your_progress">Your Progress</string>
     <string name="_62">62%</string>
+    <string name="courses">Courses</string>
+    <string name="most_popular_categories">Most Popular Categories</string>
+    <string name="all_courses">All Courses</string>
+    <string name="my_courses">My Courses</string>
 
 </resources>
